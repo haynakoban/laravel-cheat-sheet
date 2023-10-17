@@ -1,4 +1,4 @@
-# Azure Avenue - Laravel E-Commerce Store
+# Laravel Cheat Sheet
 
 Azure Avenue is a basic online store built with Laravel, serving as a comprehensive final project for my Laravel training. It showcases the fundamental features of an e-commerce platform, allowing users to browse and purchase products conveniently.
 
