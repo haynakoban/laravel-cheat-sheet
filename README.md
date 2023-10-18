@@ -75,13 +75,14 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
 **Installation Steps**
 
 1. **Install Tailwind CSS using Laravel Mix:**
-   ```javascript
+   ```shell
    npm install -D tailwindcss postcss autoprefixer
+   
    npx tailwindcss init
 
 2. **Configure your template paths:**
    ```javascript
-   # Add the paths to all of your template files in your **tailwind.config.js** file.
+   // Add the paths to all of your template files in your **tailwind.config.js** file.
    /** @type {import('tailwindcss').Config} */
    module.exports = {
      content: [
