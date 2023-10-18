@@ -24,6 +24,7 @@ Before you can start with Laravel and the packages, make sure you have the follo
 -   PHP (>=8)
 -   Composer
 -   MySQL
+-   NodeJS
 -   A code editor of your choice (e.g., Visual Studio Code)
 
 ## Installation Instructions
@@ -75,9 +76,8 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
 **Installation Steps**
 
 1. **Install Tailwind CSS using Laravel Mix:**
-   ```shell
+   ```javascript
    npm install -D tailwindcss postcss autoprefixer
-   
    npx tailwindcss init
 
 2. **Configure your template paths:**
@@ -104,14 +104,14 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
    @tailwind utilities;
 
 4. **Start using Tailwind in your project**
-   ```bash
+   ```html
    # Make sure your compiled CSS is included in the <head> then start using Tailwind’s utility classes to style your content.
    <!doctype html>
    <html>
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        **<link href="{{ asset('css/app.css') }}" rel="stylesheet">** 
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       </head>
       <body>
         <h1 class="text-3xl font-bold underline">
