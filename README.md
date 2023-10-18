@@ -38,3 +38,14 @@ Follow the instructions below to install Laravel packages that can enhance your 
 1. **Install Livewire via Composer:**
    ```bash
    composer require livewire/livewire
+
+## Usage
+
+Once you've installed these packages, you can explore and experiment with them in your Laravel project. Refer to the respective package's documentation for guidance on using their features.
+
+## Getting Help
+
+If you encounter any issues or have questions while using these packages or Laravel in general, don't hesitate to seek help from the Laravel community. You can ask questions on the [Laravel Forums](https://laracasts.com/discuss), [Stack Overflow](https://stackoverflow.com/questions/tagged/laravel), or [Laravel's official documentation](https://laravel.com/docs).
+
+
+
