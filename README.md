@@ -79,6 +79,7 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
    ```javascript
    npm install -D tailwindcss postcss autoprefixer
    npx tailwindcss init
+   npm install laravel-mix --save-dev
 
 2. **Configure your template paths:**
 
@@ -97,15 +98,14 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
      plugins: [],
    }
 
-4. **Install Laravel Mix via npm:**
-   ```javascript
-   npm install laravel-mix --save-dev
+3. **Install Laravel Mix via npm:**
 
-   // in your file directory check if have a file called webpack.mix.js,
-   // If the file exist then ignore this otherwise create the file.
+   In your file directory check if have a file called webpack.mix.js, if the file exist then ignore this step otherwise run the code to create the file.
+   ```bash
    touch webpack.mix.js
    
-5. **Add Tailwind to your Laravel Mix configuration:**
+4. **Add Tailwind to your Laravel Mix configuration:**
+
    In your webpack.mix.js file, add tailwindcss as a PostCSS plugin.
    ```javascript
    const mix = require('laravel-mix');
@@ -115,14 +115,16 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
        require("tailwindcss"),
      ]);
     
-6. **Add the Tailwind directives to your CSS:**
+5. **Add the Tailwind directives to your CSS:**
+
    Add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/app.css file.
    ```css
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
 
-7. **Start using Tailwind in your project**
+6. **Start using Tailwind in your project**
+
    Make sure your compiled CSS is included in the <head> then start using Tailwind’s utility classes to style your content.
    ```html
    <!doctype html>
@@ -141,7 +143,8 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
       </body>
    </html>
 
-8. **Configure your Package.json**
+7. **Configure your Package.json**
+
    In your package.json file, under the scripts property add the following:
    ```javascript
    "script": {
@@ -149,7 +152,8 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
       "watch": "mix watch"
    }
 
-9. **Start your build process**
+8. **Start your build process**
+
    Run your build process with npm run watch.
    ```javascript
    npm run watch
