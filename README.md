@@ -120,15 +120,16 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
    <!doctype html>
    <html>
       <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
          <-- add the line below in your blade template -->
-        @vite('resources/css/app.css')
+         @vite('resources/css/app.css')
       </head>
       <body>
-        <h1 class="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+         <h1 class="text-3xl font-bold underline">
+            Hello world!
+         </h1>
       </body>
    </html>
 
