@@ -40,7 +40,7 @@ Before diving into packages, let's start by creating a fresh Laravel project.
 1. **Install Laravel using Composer:**
    ```bash
    # create a new Laravel project via the Composer "create-project" command:
-   composer create-project laravel/laravel example-app
+   composer create-project laravel/laravel your-project-name
 
    # Or, you may create new Laravel projects by globally installing the Laravel installer via Composer.
    composer global require laravel/installer
