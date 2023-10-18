@@ -81,7 +81,7 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
    npx tailwindcss init
 
 2. **Configure your template paths:**
-   Add the paths to all of your template files in your **tailwind.config.js** file.
+   ### Add the paths to all of your template files in your **tailwind.config.js** file.
    ```javascript
    /** @type {import('tailwindcss').Config} */
    module.exports = {
