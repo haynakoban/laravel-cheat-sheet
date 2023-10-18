@@ -75,11 +75,12 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
 
 **Installation Steps**
 
-1. **Install Tailwind CSS using Laravel Mix:**
+1. **Install Tailwind CSS using Vite:**
+   
+   Install tailwindcss and its peer dependencies via npm, and then run the init command to generate both **tailwind.config.js** and **postcss.config.js**.
    ```javascript
    npm install -D tailwindcss postcss autoprefixer
-   npx tailwindcss init
-   npm install laravel-mix --save-dev
+   npx tailwindcss init -p
 
 2. **Configure your template paths:**
 
@@ -98,43 +99,31 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
      plugins: [],
    }
 
-3. **Install Laravel Mix via npm:**
+3. **Add the Tailwind directives to your CSS:**
 
-   In your file directory check if have a file called webpack.mix.js, if the file exist then ignore this step otherwise run the code to create the file.
-   ```bash
-   touch webpack.mix.js
-   
-4. **Add Tailwind to your Laravel Mix configuration:**
-
-   In your webpack.mix.js file, add tailwindcss as a PostCSS plugin.
-   ```javascript
-   const mix = require('laravel-mix');
-   
-   mix.js("resources/js/app.js", "public/js")
-     .postCss("resources/css/app.css", "public/css", [
-       require("tailwindcss"),
-     ]);
-    
-5. **Add the Tailwind directives to your CSS:**
-
-   Add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/app.css file.
+   Add the **@tailwind** directives for each of Tailwind’s layers to your **./resources/css/app.css** file.
    ```css
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
 
-6. **Start using Tailwind in your project**
+4. **Start your build process:**
 
-   Make sure your compiled CSS is included in the <head> then start using Tailwind’s utility classes to style your content.
+   Run your build process with **npm run dev**.
+   ```javascript
+   npm run dev
+   
+5. **Start using Tailwind in your project:**
+
+   Make sure your compiled CSS is included in the **<head>** then start using Tailwind’s utility classes to style your content.
    ```html
    <!doctype html>
    <html>
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-         <-- Add the link below in your blade template -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+         <-- add the line below in your blade template -->
+        @vite('resources/css/app.css')
       </head>
       <body>
         <h1 class="text-3xl font-bold underline">
@@ -143,21 +132,6 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
       </body>
    </html>
 
-7. **Configure your Package.json**
-
-   In your package.json file, under the scripts property add the following:
-   ```javascript
-   "script": {
-      "development": "mix",
-      "watch": "mix watch"
-   }
-
-8. **Start your build process**
-
-   Run your build process with npm run watch.
-   ```javascript
-   npm run watch
-   
 ## Usage
 
 Once you've installed these packages, you can explore and experiment with them in your Laravel project. Refer to the respective package's documentation for guidance on using their features.
