@@ -9,7 +9,7 @@ This cheat sheet provides quick instructions for installing Laravel packages tha
 3. [Installation Instructions](#installation-instructions)
    - [Fresh Laravel Project](#fresh-laravel-project)
    - [Package 1: Livewire](#package-1-livewire)
-   - [Package 2: Package Name](#package-2-package-name)
+   - [Package 2: Tailwind CSS](#package-2-tailwind-css)
 4. [Usage](#usage)
 5. [Getting Help](#getting-help)
 
@@ -68,6 +68,57 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
    ```bash
    composer require livewire/livewire
 
+### Package 2: Tailwind CSS
+
+[Tailwind CSS](https://tailwindcss.com/docs/guides/laravel#mix) is a powerful package for building dynamic web applications in Laravel without writing any JavaScript. You can choose to install Livewire if you want to explore this approach.
+
+**Installation Steps**
+
+1. **Install Tailwind CSS using Laravel Mix:**
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init
+
+2. **Configure your template paths:**
+   ```bash
+   # Add the paths to all of your template files in your **tailwind.config.js** file.
+   /** @type {import('tailwindcss').Config} */
+   module.exports = {
+     content: [
+       "./resources/**/*.blade.php",
+       "./resources/**/*.js",
+       "./resources/**/*.vue",
+     ],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   }
+
+3. **Add the Tailwind directives to your CSS:**
+   ```bash
+   # Add the **@tailwind** directives for each of Tailwind’s layers to your **./resources/css/app.css** file.
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+
+4. **Start using Tailwind in your project**
+   ```bash
+   # Make sure your compiled CSS is included in the <head> then start using Tailwind’s utility classes to style your content.
+   <!doctype html>
+   <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        **<link href="{{ asset('css/app.css') }}" rel="stylesheet">** 
+      </head>
+      <body>
+        <h1 class="text-3xl font-bold underline">
+          Hello world!
+        </h1>
+      </body>
+   </html>
+   
 ## Usage
 
 Once you've installed these packages, you can explore and experiment with them in your Laravel project. Refer to the respective package's documentation for guidance on using their features.
