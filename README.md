@@ -1,6 +1,6 @@
 # Laravel Packages Installation Cheat Sheet
 
-This cheat sheet provides quick instructions for installing optional Laravel packages that can enhance your experience as a new Laravel developer. You can choose to install these packages as you explore Laravel and its capabilities.
+This cheat sheet provides quick instructions for installing Laravel packages that can enhance your experience as a new Laravel developer. You can choose to install these packages as you explore Laravel and its capabilities.
 
 ## Table of Contents
 
@@ -15,14 +15,16 @@ This cheat sheet provides quick instructions for installing optional Laravel pac
 
 ## Introduction
 
-This cheat sheet provides guidance for new Laravel developers, helping you get started with optional packages to explore Laravel's capabilities. These packages are not mandatory, but they can enhance your learning experience as you dive into Laravel.
+This cheat sheet provides guidance for new Laravel developers, helping you get started with packages to explore Laravel's capabilities. These packages are not mandatory, but they can enhance your learning experience as you dive into Laravel.
 
 ## Prerequisites
 
-Before installing these optional packages, ensure you have the following prerequisites in place:
+Before installing these packages, ensure you have the following prerequisites in place:
 
-- A fresh Laravel installation or a new Laravel project.
-- Composer installed on your system.
+### 1. Technologies Used 
+-   PHP (>=8)
+-   Composer
+-   MySQL
 
 ## Installation Instructions
 
