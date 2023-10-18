@@ -96,21 +96,41 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
      plugins: [],
    }
 
-3. **Add the Tailwind directives to your CSS:**
-   ```bash
-   # Add the **@tailwind** directives for each of Tailwind’s layers to your **./resources/css/app.css** file.
+3. **Install Laravel Mix via npm:**
+   ```javascript
+   npm install laravel-mix --save-dev
+
+   // in your file directory check if there is a file called webpack.mix.js,
+   // if you don't that file then create it.
+   touch webpack.mix.js
+   
+4. **Add Tailwind to your Laravel Mix configuration:**
+   ```javascript
+   // In your webpack.mix.js file, add tailwindcss as a PostCSS plugin.
+   const mix = require('laravel-mix');
+   
+   mix.js("resources/js/app.js", "public/js")
+     .postCss("resources/css/app.css", "public/css", [
+       require("tailwindcss"),
+     ]);
+    
+5. **Add the Tailwind directives to your CSS:**
+   ```css
+   /* Add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/app.css file. */
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
 
-4. **Start using Tailwind in your project**
+6. **Start using Tailwind in your project**
    ```html
-   # Make sure your compiled CSS is included in the <head> then start using Tailwind’s utility classes to style your content.
+   <!-- Make sure your compiled CSS is included in the <head> then start using Tailwind’s utility classes to style your content. -->
    <!doctype html>
    <html>
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+         <-- Add the link below in your blade template -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       </head>
       <body>
@@ -119,6 +139,19 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
         </h1>
       </body>
    </html>
+
+7. **Configure your Package.json**
+   ```javascript
+   // In your package.json file, under the scripts property add the following:
+   "script": {
+      "development": "mix",
+      "watch": "mix watch"
+   }
+
+8. **Start your build process**
+   ```javascript
+   // Run your build process with npm run watch.
+   npm run watch
    
 ## Usage
 
