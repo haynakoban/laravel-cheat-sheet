@@ -71,7 +71,7 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
 
 ### Package 2: Tailwind CSS
 
-[Tailwind CSS](https://tailwindcss.com/docs/guides/laravel#mix) is a powerful package for building dynamic web applications in Laravel without writing any JavaScript. You can choose to install Livewire if you want to explore this approach.
+[Tailwind CSS](https://tailwindcss.com/docs/guides/laravel#mix) is a utility-first CSS framework that simplifies the process of styling your web applications. With Tailwind CSS, you can create beautiful, responsive designs without writing extensive custom CSS. You can choose to install Tailwind CSS if you want to streamline your styling process in Laravel and explore its approach to efficient front-end development.
 
 **Installation Steps**
 
@@ -81,8 +81,8 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
    npx tailwindcss init
 
 2. **Configure your template paths:**
+   Add the paths to all of your template files in your **tailwind.config.js** file.
    ```javascript
-   // Add the paths to all of your template files in your **tailwind.config.js** file.
    /** @type {import('tailwindcss').Config} */
    module.exports = {
      content: [
@@ -100,13 +100,13 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
    ```javascript
    npm install laravel-mix --save-dev
 
-   // in your file directory check if there is a file called webpack.mix.js,
-   // if you don't that file then create it.
+   // in your file directory check if have a file called webpack.mix.js,
+   // If the file exist then ignore this otherwise create the file.
    touch webpack.mix.js
    
 4. **Add Tailwind to your Laravel Mix configuration:**
+   In your webpack.mix.js file, add tailwindcss as a PostCSS plugin.
    ```javascript
-   // In your webpack.mix.js file, add tailwindcss as a PostCSS plugin.
    const mix = require('laravel-mix');
    
    mix.js("resources/js/app.js", "public/js")
@@ -115,15 +115,15 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
      ]);
     
 5. **Add the Tailwind directives to your CSS:**
+   Add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/app.css file.
    ```css
-   /* Add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/app.css file. */
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
 
 6. **Start using Tailwind in your project**
+   Make sure your compiled CSS is included in the <head> then start using Tailwind’s utility classes to style your content.
    ```html
-   <!-- Make sure your compiled CSS is included in the <head> then start using Tailwind’s utility classes to style your content. -->
    <!doctype html>
    <html>
       <head>
@@ -141,16 +141,16 @@ Now that you have a fresh Laravel project set up, you can proceed to install Lar
    </html>
 
 7. **Configure your Package.json**
+   In your package.json file, under the scripts property add the following:
    ```javascript
-   // In your package.json file, under the scripts property add the following:
    "script": {
       "development": "mix",
       "watch": "mix watch"
    }
 
 8. **Start your build process**
+   Run your build process with npm run watch.
    ```javascript
-   // Run your build process with npm run watch.
    npm run watch
    
 ## Usage
