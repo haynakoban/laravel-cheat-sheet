@@ -21,14 +21,13 @@ This cheat sheet provides guidance for new Laravel developers, helping you get s
 
 Before installing these packages, ensure you have the following prerequisites in place:
 
-### 1. Technologies Used 
 -   PHP (>=8)
 -   Composer
 -   MySQL
 
 ## Installation Instructions
 
-Follow the instructions below to install optional Laravel packages that can enhance your experience as you explore Laravel. You can choose to install these packages based on your interests and learning goals.
+Follow the instructions below to install Laravel packages that can enhance your experience as you explore Laravel. You can choose to install these packages based on your interests and learning goals.
 
 ### Package 1: Livewire
 
